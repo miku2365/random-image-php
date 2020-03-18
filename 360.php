@@ -8,6 +8,6 @@ $arr_data = $arr['data'];
 $img = $arr_data[rand(0,count($arr_data))]['url'];
 header("Location:$img"); 
 } else {
-  $img = "https://i.loli.net/2019/08/21/LZcjgnGYXCp2KFe.jpg";//出错时的图片
+  $img = "https://cdn.jsdelivr.net/gh/miku-o/imgData/screenshot.png";//出错时的图片
   header("Location:$img"); 
   }
