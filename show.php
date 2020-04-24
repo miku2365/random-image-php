@@ -57,7 +57,7 @@ for ($x = 0; $x < $length; $x++) {
 </div>
 </section>
 <footer>
-  <p class="copyright align-center">Made by <a href="https://zhangyijia.eu5.org">Zhang YiJia</a>.  <a href="https://github.com/miku-o/img-api">Github(Source Code)</a></p>
+  <p class="copyright align-center">Made by <a href="https://zhangyijia.eu5.org">Zhang YiJia</a>. </p>
 </footer>
 </body>
 </html>
