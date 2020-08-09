@@ -36,7 +36,6 @@
 <body>
   <header>
     <h1 class="title">随机图片api</h1>
-    <h2 class="subtitle">说明文档</h2>
     <p class="disclaimer"><a href="https://img.66ccff.ml/">图片一览</a></p>
     <button class="get-started button button-primary button-large">详情</button>
     <a class="scroll-down" href="#"></a>
