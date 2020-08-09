@@ -1,11 +1,17 @@
 <?php
-$url = explode("\n", file_get_contents('github.txt'));//url数组
+$url = explode("\n", file_get_contents('url.txt'));//url数组
 $i = array_rand($url);//随机id
 $x = $url[$i];//随机图片url
 $id = $_REQUEST['id'];
 $type = $_REQUEST['type'];
 switch ($type) {
     case 'json':
+        $result = array("code" => "200", "url" => "{$x}");
+        header('Access-Control-Allow-Origin:*'); 
+        header('Content-type:text/json');
+        echo json_encode($result);
+        break;
+    case 'JSON':
         $result = array("code" => "200", "url" => "{$x}");
         $imageInfo = getimagesize($x);
         $imageSize = get_headers($x, 1)['Content-Length'];
@@ -16,15 +22,6 @@ switch ($type) {
         header('Access-Control-Allow-Origin:*'); 
         header('Content-type:text/json');
         echo json_encode($result);
-        break;
-    case 'js':
-        header("Expires: Mon, 26 Jul 1997 05:00:00 GMT");
-        header("Cache-Control: no-cache");
-        header("Pragma: no-cache");
-        header("Content-type:application/x-javascript");
-        echo "var pic_random=" . "'" . $x . "'" . ";";
-        echo "var pic_end=" . count($url) . ";";
-        echo "var pic_rdn=" . $i . ";";
         break;
     case 'output':
         $mime = getimagesize($x)[mime];
